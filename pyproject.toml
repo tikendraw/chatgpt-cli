@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chatgpt"
+authors = [
+    {name = "Tikendra Kumar Sahu", email = "tikendra@fanclub.pm"},
+]
+version = "1.0.0"
+description = "chatgpt CLI"
+requires-python = ">=3.7"
+
+dependencies = [
+    "requests",
+	"termcolor>=2.2.0",
+	"openai>=0.27.2"
+]
+
+[project.scripts]
+chatgpt = "chatgpt.chatgpt_text_davinci_003:main"
+chatgptplus= "chatgpt.chatgpt_gpt_3_dot_5_turbo:main"
+
+
