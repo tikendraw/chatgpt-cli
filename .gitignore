@@ -1,2 +1,3 @@
 chatgpt/openai_api.json
 chatgpt/chatgpt_history.log
+chatgpt/__pycache__/
