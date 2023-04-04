@@ -1,8 +1,12 @@
 # ChatGPT CLI
 This project provides a command-line interface to interact with OpenAI's ChatGPT API. With this tool, you can easily send prompts to the API and receive responses right from your terminal.
+** Note: This is a free tool. DO NOT ABUSE IT OR YOUR API KEYS WILL BE REVOKED **
 
 ## Prerequisites
 Before you can start using this tool, you'll need an OpenAI API key. You can sign up for an account and obtain an API key by visiting the OpenAI website.
+[Get api key here](https://platform.openai.com/account/api-keys)
+
+
 
 ## Installation
 Clone the repository to your local machine:
