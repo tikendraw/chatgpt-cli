@@ -21,7 +21,7 @@ To use chatgpt with `text_davinci_003` model
 ```
 chatgpt your_prompt_here -t [temperature] 
 ```
-To use chatgpt 3.5  model
+To use chatgpt 3.5 turbo model
 ```
 chatgptplus your_prompt_here  
 ```
