@@ -1,6 +1,6 @@
 # ChatGPT CLI
 This project provides a command-line interface to interact with OpenAI's ChatGPT API. With this tool, you can easily send prompts to the API and receive responses right from your terminal.
-** Note: This is a free tool. DO NOT ABUSE IT OR YOUR API KEYS WILL BE REVOKED **
+**Note: This is a free tool. DO NOT ABUSE IT OR YOUR API KEYS WILL BE REVOKED 1-2 request/Hour**
 
 ## Prerequisites
 Before you can start using this tool, you'll need an OpenAI API key. You can sign up for an account and obtain an API key by visiting the OpenAI website.
@@ -38,4 +38,4 @@ Acknowledgements
 This project was inspired by the official OpenAI API examples and uses the OpenAI Python library for API communication.
 
 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is just for fun and is under No license .
