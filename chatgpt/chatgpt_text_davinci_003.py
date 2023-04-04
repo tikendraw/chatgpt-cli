@@ -5,6 +5,7 @@ import logging
 from termcolor import colored
 import os
 from pathlib import Path
+from utils import indent
 
 API_ENDPOINT = "https://api.openai.com/v1/completions"
 
@@ -14,15 +15,15 @@ LOG_FILE = FILE_PATH / "chatgpt_history.log"
 
 
 def write_output(response, args):
-    response_text = response.json()["choices"][0]["text"]
+    response_text = response.json()["choices"][0]["text"].strip("\n")
     logging.info(f"\tPrompt : {args.prompt} \n\tChatgpt : {response_text}")
 
     print("\n")
 
-    print("YOU     : ", args.prompt)
+    print(colored(f"YOU     :  {args.prompt}\n", "blue"))
 
-    print("CHATGPT : ")
-    print(colored(f"{response_text}\n", "green", "on_black"))
+    print(colored("CHATGPT : \n", "green"))
+    print(colored(f"{indent(response_text, 10)}", "green"))
 
     print("\n")
 
@@ -42,7 +43,7 @@ def main():
     parser.add_argument(
         "--max_tokens",
         type=int,
-        default=500,
+        default=200,
         help="Maximum number of tokens to generate in the response",
     )
     parser.add_argument(
@@ -67,6 +68,7 @@ def main():
 
     except Exception as e:
         print("Exception occurred while reading API key from file:", e)
+        logging.error(e)
         return
 
     request_headers = {
@@ -86,6 +88,7 @@ def main():
     if response.status_code == 200:
         write_output(response, args)
     else:
+        print(f"Request failed with status code: {response.status_code}")
         logging.error(f"Request failed with status code: {response.status_code}")
 
 

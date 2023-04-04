@@ -5,26 +5,12 @@ import json
 import logging
 from termcolor import colored
 from pathlib import Path
+from utils import indent
 
 
 FILE_PATH = Path(os.path.dirname(__file__))
 API_FILE = FILE_PATH / "openai_api.json"
 LOG_FILE = FILE_PATH / "chatgpt_history.log"
-
-
-def write_output(completion, args):
-    response_text = completion.choices[0].message["content"]
-    logging.info(f"\nPrompt : {args.prompt} \nChatgpt : \n{response_text}")
-
-    print("\n")
-
-    print("YOU     : ", args.prompt)
-
-    print("CHATGPT : ")
-
-    print(colored(f"\n{response_text}\n", "green", "on_black"))
-
-    print("\n")
 
 
 def main():
@@ -66,6 +52,21 @@ def main():
     )
 
     write_output(completion, args)
+
+
+def write_output(completion, args):
+    # response_text = completion.choices[0].message["content"]
+    response_text = completion.strip("\n")
+    logging.info(f"\nPrompt : {args.prompt} \nChatgpt : \n{response_text}")
+
+    print("\n")
+
+    print(colored(f"YOU     :  {args.prompt}\n", "blue"))
+
+    print(colored("CHATGPT : \n", "green"))
+    print(colored(f"{indent(response_text, 10)}", "green"))
+
+    print("\n")
 
 
 if __name__ == "__main__":

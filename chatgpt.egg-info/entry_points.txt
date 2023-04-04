@@ -1,0 +1,3 @@
+[console_scripts]
+chatgpt = chatgpt.chatgpt_text_davinci_003:main
+chatgptplus = chatgpt.chatgpt_gpt_3_dot_5_turbo:main

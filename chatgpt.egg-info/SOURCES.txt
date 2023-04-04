@@ -1,0 +1,16 @@
+.gitignore
+README.md
+pyproject.toml
+chatgpt/all_model_list.json
+chatgpt/chatgpt_gpt_3_dot_5_turbo.py
+chatgpt/chatgpt_text_davinci_003.py
+chatgpt/utils.py
+chatgpt.egg-info/PKG-INFO
+chatgpt.egg-info/SOURCES.txt
+chatgpt.egg-info/dependency_links.txt
+chatgpt.egg-info/entry_points.txt
+chatgpt.egg-info/requires.txt
+chatgpt.egg-info/top_level.txt
+chatgpt/__pycache__/__main__.cpython-310.pyc
+chatgpt/__pycache__/chatgpt_gpt_3_dot_5_turbo.cpython-310.pyc
+chatgpt/__pycache__/chatgpt_text_davinci_003.cpython-310.pyc

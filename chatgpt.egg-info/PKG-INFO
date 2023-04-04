@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: chatgpt
+Version: 1.0.0
+Summary: chatgpt CLI
+Author-email: Tikendra Kumar Sahu <tikendra@fanclub.pm>
+Requires-Python: >=3.7
